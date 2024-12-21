@@ -41,11 +41,7 @@ jobs:
            username: ${{ secrets.ACR_USERNAME }}
            password: ${{ secrets.ACR_PASSWORD }}
 
-      - name: Kubernetes Set Context
-        uses: Azure/k8s-set-context@v3.0
-        with:
-          resource-group: class
-          cluster-name:  ${{ env.name }}
+   
 
       # Deploy to AKS
       - name: Deploy to AKS
